@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background-color: #e8e1d7; /* Beige background */
+  font-family: 'Sen', sans-serif;
 }
 
 .App-logo {
@@ -34,5 +37,239 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.title {
+  margin: 0;
+  line-height: 1;
+  width: 100%;
+  max-width: min(90vw, 700px);
+  margin: 0 auto;
+  padding-bottom: 0.3em; /* Add space for the descender */
+}
+
+/* Shared text styles to ensure EXACT same sizing */
+.something {
+  display: block;
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  line-height: 1;
+  width: 100%;
+  margin: 0;
+}
+
+.etcy {
+  display: block;
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 15vw, 5.5rem);
+  line-height: 1;
+  width: 100%;
+  margin: 0;
+}
+
+/* Specific styles */
+.something {
+  color: #8b6b44;
+  margin-bottom: 0.2em;
+  letter-spacing: -0.06em;  /* Tighter spacing for 'something' since it has more characters */
+}
+
+.etcy {
+  background-image: var(--background-image, linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d));
+  background-size: 150% 150%;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.05em;  /* Looser spacing for 'etcyting' to match length */
+  animation: move-bg 15s ease infinite;
+  padding-bottom: 0.15em; /* Extra space for the 'g' descender */
+}
+
+.thing {
+  color: #8b6b44; /* Brown color */
+  display: block;
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: 300;
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.progress-section {
+  margin: 2rem 0;
+}
+
+.prep-text {
+  color: #8b6b44;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  letter-spacing: 0.02em;
+  margin: 0.5rem 0;
+  opacity: 0.9;
+}
+
+.cooking-text {
+  color: #8b6b44;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.progress-bar {
+  width: clamp(40px, 8vw, 60px);
+  height: clamp(20px, 4vw, 30px);
+  background: #8b6b44;
+  margin: 3rem auto;
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  background: #b65bba;
+  border-radius: 999px;
+  animation: progress 2s ease-in-out infinite alternate;
+}
+
+@keyframes progress {
+  from { left: 0; }
+  to { left: 50%; }
+}
+
+.social-section {
+  margin-top: 4rem;
+}
+
+.follow-text {
+  color: #8b6b44;
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #8b6b44;
+  padding: 0.75rem 1.5rem;
+  border-radius: 26px;
+  transition: all 0.3s ease;
+  background: #e8e1d7;  /* Match the page background */
+  box-shadow: 
+    8px 8px 16px rgba(139, 107, 68, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.7);
+}
+
+.instagram-link:hover {
+  box-shadow: 
+    12px 12px 20px rgba(139, 107, 68, 0.15),
+    -12px -12px 20px rgba(255, 255, 255, 0.7);
+  transform: translateY(-1px);
+}
+
+.instagram-link:active {
+  box-shadow: 
+    inset 4px 4px 8px rgba(139, 107, 68, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+  transform: translateY(1px);
+}
+
+.instagram-icon {
+  width: 24px;
+  height: 24px;
+  color: #8b6b44;
+  transition: all 0.3s ease;
+}
+
+.instagram-handle {
+  font-family: 'Readex Pro', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  letter-spacing: -0.01em;
+}
+
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  .landing-container {
+    padding: 1.5rem;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+
+  .progress-section {
+    margin: 1.5rem 0;
+  }
+
+  .social-section {
+    margin-top: 3rem;
+  }
+
+  .title {
+    max-width: 85vw;
+  }
+
+  .something {
+    margin-bottom: 0.2em;
+  }
+  
+  .etcy {
+    font-size: clamp(3.5rem, 11vw, 7rem);
+  }
+}
+
+/* Larger Screens */
+@media (min-width: 1200px) {
+  .content {
+    max-width: 1000px;
+  }
+
+  .something {
+    margin-bottom: 0.75rem;
+  }
+
+  .progress-section {
+    margin: 2.5rem 0;
   }
 }
