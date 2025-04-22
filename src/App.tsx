@@ -30,16 +30,7 @@ function App() {
           </div>
           <h1 className="title">
             <span className="something">something</span>
-            <span
-              className="etcy"
-              style={
-                {
-                  "--background-image": `url(${backgroundImage})`,
-                } as React.CSSProperties
-              }
-            >
-              etcyting
-            </span>
+            <span className="etcy">etcyting</span>
           </h1>
           <div className="progress-section">
             <p className="prep-text">for you</p>

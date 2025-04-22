@@ -2,7 +2,7 @@
   text-align: center;
   min-height: 100vh;
   background-color: #e8e1d7; /* Beige background */
-  font-family: 'Sen', sans-serif;
+  font-family: "Sen", sans-serif;
 }
 
 .App-logo {
@@ -66,7 +66,7 @@
 /* Shared text styles to ensure EXACT same sizing */
 .something {
   display: block;
-  font-family: 'Readex Pro', sans-serif;
+  font-family: "Readex Pro", sans-serif;
   font-weight: 700;
   font-size: clamp(2.5rem, 8vw, 5.5rem);
   line-height: 1;
@@ -76,7 +76,7 @@
 
 .etcy {
   display: block;
-  font-family: 'Readex Pro', sans-serif;
+  font-family: "Readex Pro", sans-serif;
   font-weight: 700;
   font-size: clamp(3rem, 15vw, 5.5rem);
   line-height: 1;
@@ -88,17 +88,17 @@
 .something {
   color: #8b6b44;
   margin-bottom: 0.2em;
-  letter-spacing: -0.06em;  /* Tighter spacing for 'something' since it has more characters */
+  letter-spacing: -0.06em; /* Tighter spacing for 'something' since it has more characters */
 }
 
 .etcy {
-  background-image: var(--background-image, linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96c93d));
+  background-image: url("./assets/back.png");
   background-size: 150% 150%;
   background-position: center;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  letter-spacing: 0.05em;  /* Looser spacing for 'etcyting' to match length */
+  letter-spacing: 0.05em; /* Looser spacing for 'etcyting' to match length */
   animation: move-bg 15s ease infinite;
   padding-bottom: 0.15em; /* Extra space for the 'g' descender */
 }
@@ -106,7 +106,7 @@
 .thing {
   color: #8b6b44; /* Brown color */
   display: block;
-  font-family: 'Readex Pro', sans-serif;
+  font-family: "Readex Pro", sans-serif;
   font-weight: 300;
 }
 
@@ -128,7 +128,7 @@
 
 .prep-text {
   color: #8b6b44;
-  font-family: 'Sen', sans-serif;
+  font-family: "Sen", sans-serif;
   font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   letter-spacing: 0.02em;
@@ -138,7 +138,7 @@
 
 .cooking-text {
   color: #8b6b44;
-  font-family: 'Sen', sans-serif;
+  font-family: "Sen", sans-serif;
   font-weight: 400;
   margin: 1rem 0;
   font-size: 1.2rem;
@@ -166,8 +166,12 @@
 }
 
 @keyframes progress {
-  from { left: 0; }
-  to { left: 50%; }
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
 
 .social-section {
@@ -176,7 +180,7 @@
 
 .follow-text {
   color: #8b6b44;
-  font-family: 'Sen', sans-serif;
+  font-family: "Sen", sans-serif;
   font-weight: 400;
   font-size: clamp(0.875rem, 2vw, 1rem);
   letter-spacing: 0.02em;
@@ -194,22 +198,19 @@
   padding: 0.75rem 1.5rem;
   border-radius: 26px;
   transition: all 0.3s ease;
-  background: #e8e1d7;  /* Match the page background */
-  box-shadow: 
-    8px 8px 16px rgba(139, 107, 68, 0.15),
+  background: #e8e1d7; /* Match the page background */
+  box-shadow: 8px 8px 16px rgba(139, 107, 68, 0.15),
     -8px -8px 16px rgba(255, 255, 255, 0.7);
 }
 
 .instagram-link:hover {
-  box-shadow: 
-    12px 12px 20px rgba(139, 107, 68, 0.15),
+  box-shadow: 12px 12px 20px rgba(139, 107, 68, 0.15),
     -12px -12px 20px rgba(255, 255, 255, 0.7);
   transform: translateY(-1px);
 }
 
 .instagram-link:active {
-  box-shadow: 
-    inset 4px 4px 8px rgba(139, 107, 68, 0.15),
+  box-shadow: inset 4px 4px 8px rgba(139, 107, 68, 0.15),
     inset -4px -4px 8px rgba(255, 255, 255, 0.7);
   transform: translateY(1px);
 }
@@ -222,7 +223,7 @@
 }
 
 .instagram-handle {
-  font-family: 'Readex Pro', sans-serif;
+  font-family: "Readex Pro", sans-serif;
   font-weight: 400;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   letter-spacing: -0.01em;
@@ -253,7 +254,7 @@
   .something {
     margin-bottom: 0.2em;
   }
-  
+
   .etcy {
     font-size: clamp(3.5rem, 11vw, 7rem);
   }
